@@ -1,0 +1,45 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "paths": {
+      "shared-libs": [
+        "dist/shared-libs/shared-libs",
+        "dist/shared-libs"
+      ],
+      "addon_web/libs/interfaces/*": [
+        "libs/interfaces/*",
+        "libs/interfaces/bazel-bin/*",
+        "libs/interfaces/dist/bin/*",
+        "libs/interfaces/!node_modules/*"
+      ],
+      "addon_web/libs/web-ui/*": ["libs/web-ui/*", "libs/web-ui/bazel-bin/*", "libs/web-ui/dist/bin/*", "libs/web-ui/!node_modules/*"]
+    },
+    "target": "es2017",
+    "module": "es2020",
+    "lib": [
+      "es2020",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

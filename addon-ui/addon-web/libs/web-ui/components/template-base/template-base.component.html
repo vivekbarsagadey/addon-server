@@ -1,0 +1,38 @@
+<div class="app-container">
+  <mat-toolbar>
+    <button class="no-outline-btn" (click)="onToolbarMenuToggle()" mat-icon-button *ngIf="displaySidebar">
+      <mat-icon matTooltip="Menu">menu</mat-icon>
+    </button>
+
+
+    <div class="fill-remaining-space"></div>
+
+    <div class="btn-group">
+      <lib-user-profile></lib-user-profile>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container" *ngIf="displaySidebar; else noSideBarTmpl">
+    <mat-sidenav id="sidenav" [class.menu-close]="!isMenuOpen" [class.menu-open]="isMenuOpen" mode="side" opened>
+      <mat-nav-list>
+        <lib-menu-list-item
+          *ngFor="let item of navItems"
+          [item]="item"
+          [ngClass]="{ selected: item.selected }"
+          (click)="changeSelection(item.title)"
+          [selectLabelSubject]="selectLabelSubject"
+        ></lib-menu-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content [class.menu-close]="!isMenuOpen">
+      <ng-content> </ng-content>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
+
+<ng-template #noSideBarTmpl>
+  <div class="no-side-nav-content">
+    <ng-content select=".noSideBar"></ng-content>
+  </div>
+</ng-template>

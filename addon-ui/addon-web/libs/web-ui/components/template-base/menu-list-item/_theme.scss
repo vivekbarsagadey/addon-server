@@ -1,0 +1,24 @@
+@mixin menu-list-item-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  .mat-list-item.active {
+    background-color: map-get($background, selected-button);
+    .routeIcon {
+      color: map-get($primary, 50);
+      fill: map-get($primary, 50);
+    }
+    :hover {
+      background-color: map-get($background, selected-button);
+    }
+  }
+  //.mat-list-item.expanded {
+  //  background-color: map-get($foreground, table-row);
+  //}
+
+  //.children-list {
+  //  background-color: map-get($foreground, table-row);
+  //}
+}

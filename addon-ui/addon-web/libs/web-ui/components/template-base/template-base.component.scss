@@ -1,0 +1,192 @@
+@import 'theme';
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  mat-toolbar {
+    min-height: 64px;
+    height: 64px;
+    flex: 0 0;
+    padding-left: 6px;
+    padding-right: 19px;
+
+    .no-outline-btn {
+      outline: none !important;
+      border: none !important;
+    }
+
+    & .is-mobile {
+      position: fixed;
+      /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+      z-index: 2;
+    }
+
+    .logo {
+      margin-left: 11px;
+      width: 68px;
+      height: 23px;
+      cursor: pointer;
+      object-fit: contain;
+    }
+
+    .vertical-line {
+      width: 1px;
+      height: 36px;
+      margin-left: 13px;
+      margin-right: 13px;
+    }
+
+    .app-name {
+      height: 19px;
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+    }
+
+    .search-bar-container {
+      margin-left: 55px;
+      width: 100%;
+    }
+
+    .fill-remaining-space {
+      flex: 1 1 auto;
+    }
+
+    .btn-group {
+      margin-left: 67px;
+      float: right;
+    }
+
+    platform-ui-appbar-profile {
+      margin-left: 19px;
+    }
+  }
+
+  .sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+
+    & .is-mobile {
+      /* When the sidenav is fixed, don't constrain the heightPixels of the sidenav container. This allows the
+         `<body>` to be our scrolling element for mobile layouts. */
+      flex: 1 0 auto;
+    }
+
+    #sidenav {
+      -webkit-transition: width 0.5s;
+      transition: width 0.5s;
+
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      &.menu-close {
+        width: 65px;
+      }
+
+      .second-tree-invisible {
+        display: none;
+      }
+
+      &.menu-close {
+        transform: translate(0, 0) !important;
+        visibility: visible !important;
+        min-width: 59px !important;
+        width: 59px !important;
+        //min-width: fit-content !important;
+        -webkit-transition: width 0.5s;
+        transition: width 0.5s;
+
+        ::ng-deep.mat-list-item {
+          font-size: 15px !important;
+
+          .routeIcon {
+            margin-right: 0px !important;
+          }
+        }
+
+        & ::ng-deep .mat-sidenav-content {
+          margin-left: 59px !important;
+        }
+
+        & ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content,
+        .mat-list-base .mat-list-option .mat-list-item-content {
+          .item-text {
+            display: none;
+          }
+          .expand-button {
+            display: none;
+          }
+          mat-icon {
+            margin-left: 0px !important;
+          }
+        }
+      }
+
+      &.menu-open {
+        width: 213px;
+      }
+    }
+
+    .copyright {
+      bottom: 0;
+      width: 100%;
+      position: absolute;
+      height: 67px !important;
+
+      .copyright-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #272727 !important;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 2.17;
+        letter-spacing: -0.11px;
+      }
+    }
+
+    mat-sidenav-content {
+      -webkit-transition: margin 0.5s;
+      transition: margin 0.5s;
+
+      &.menu-close {
+        margin-left: 67px !important;
+      }
+    }
+
+    .secondary-nav-list {
+      margin-bottom: 70px !important;
+    }
+  }
+
+  .no-side-nav-content {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: hidden;
+  }
+}
+
+//::ng-deep .mat-drawer-inner-container {
+//  overflow-x: hidden !important;
+//}
+.backdrop-background {
+  background: none !important;
+  overflow-y: hidden !important;
+}
+
+notifications {
+  position: relative;
+}

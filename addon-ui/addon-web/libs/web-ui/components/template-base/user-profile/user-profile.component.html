@@ -1,0 +1,14 @@
+<div matRipple class="container">
+  <mat-icon matTooltip="Your profile and settings" class="userLogo" [matMenuTriggerFor]="menu">face</mat-icon>
+</div>
+
+<mat-menu #menu="matMenu">
+  <div class="menu-container">
+    <div class="sign-out-btn">
+      <button class="form-cancel-btn no-outline-btn transparent-btn text-btn" mat-flat-button (click)="logOut()">
+        Sign Out
+      </button>
+    </div>
+    <hr />
+  </div>
+</mat-menu>
