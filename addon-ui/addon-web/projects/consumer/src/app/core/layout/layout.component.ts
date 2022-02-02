@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NavItem} from "addon_web/libs/interfaces/nav-item.model";
 //@ts-ignore
-import { Apps } from "addon_web/libs/enums/apps";
+import {Apps} from "addon_web/libs/enums/apps";
 
 @Component({
   selector: 'app-layout',
@@ -16,27 +16,6 @@ export class LayoutComponent implements OnInit {
       link: './dashboard',
       children: [],
       selected: false
-    },
-    {
-      title: 'Users',
-      icon: 'supervised_user_circle',
-      link: './users',
-      children: [],
-      selected: false
-    },
-    {
-      title: 'Roles',
-      icon: 'https',
-      link: './roles',
-      children: [],
-      selected: false
-    },
-    {
-      title: 'Rules',
-      icon: 'gavel',
-      link: './rules',
-      children: [],
-      selected: false
     }
   ]
   constructor() { }
@@ -47,5 +26,4 @@ export class LayoutComponent implements OnInit {
   get apps() {
     return Apps;
   }
-
 }

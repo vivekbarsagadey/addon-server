@@ -27,6 +27,12 @@
         "libs/interfaces/dist/bin/*",
         "libs/interfaces/!node_modules/*"
       ],
+      "addon_web/libs/enums/*": [
+        "libs/enums/*",
+        "libs/enums/bazel-bin/*",
+        "libs/enums/dist/bin/*",
+        "libs/enums/!node_modules/*"
+      ],
       "addon_web/libs/web-ui/*": ["libs/web-ui/*", "libs/web-ui/bazel-bin/*", "libs/web-ui/dist/bin/*", "libs/web-ui/!node_modules/*"]
     },
     "target": "es2017",

@@ -22,34 +22,17 @@
       z-index: 2;
     }
 
-    .logo {
-      margin-left: 11px;
-      width: 68px;
-      height: 23px;
-      cursor: pointer;
-      object-fit: contain;
-    }
-
     .vertical-line {
       width: 1px;
       height: 36px;
-      margin-left: 13px;
-      margin-right: 13px;
+      margin-left: 15px;
+      margin-right: 15px;
+      background-color: #000000;
     }
 
-    .app-name {
-      height: 19px;
-      font-size: 16px;
-      font-weight: normal;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-    }
-
-    .search-bar-container {
-      margin-left: 55px;
-      width: 100%;
+    .app-title {
+      font-size: 1em;
+      font-weight: bold;
     }
 
     .fill-remaining-space {
@@ -135,24 +118,6 @@
       }
     }
 
-    .copyright {
-      bottom: 0;
-      width: 100%;
-      position: absolute;
-      height: 67px !important;
-
-      .copyright-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #272727 !important;
-        font-size: 12px;
-        font-weight: 300;
-        line-height: 2.17;
-        letter-spacing: -0.11px;
-      }
-    }
-
     mat-sidenav-content {
       -webkit-transition: margin 0.5s;
       transition: margin 0.5s;
@@ -161,10 +126,6 @@
         margin-left: 67px !important;
       }
     }
-
-    .secondary-nav-list {
-      margin-bottom: 70px !important;
-    }
   }
 
   .no-side-nav-content {
@@ -172,16 +133,4 @@
     min-height: 0;
     overflow-y: hidden;
   }
-}
-
-//::ng-deep .mat-drawer-inner-container {
-//  overflow-x: hidden !important;
-//}
-.backdrop-background {
-  background: none !important;
-  overflow-y: hidden !important;
-}
-
-notifications {
-  position: relative;
 }
