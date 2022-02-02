@@ -16,11 +16,6 @@
     padding-left: 6px;
     padding-right: 19px;
 
-    .no-outline-btn {
-      outline: none !important;
-      border: none !important;
-    }
-
     & .is-mobile {
       position: fixed;
       /* Make sure the toolbar will stay on top of the content as it scrolls past. */
